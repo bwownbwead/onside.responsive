@@ -1,0 +1,708 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>
+		Onside Email Template
+	</title>
+
+	<!-- reset and helpers -->
+	<style type="text/css">
+		/* Force Outlook to provide a "view in browser" menu link. */
+		#outlook a {
+			padding:0;
+		} 
+
+		body { 
+			width:100% !important; 
+			margin:0; 
+			padding:0;
+			-webkit-text-size-adjust:100%; /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+			-ms-text-size-adjust:100%; 
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		} 
+
+		 /* Force Hotmail to display emails at full width */  
+		.ExternalClass {
+			width:100%;
+		}
+
+		/* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */ 
+		.ExternalClass, 
+		.ExternalClass p, 
+		.ExternalClass span, 
+		.ExternalClass font, 
+		.ExternalClass td, 
+		.ExternalClass div {
+			line-height: 100%;
+		}
+		
+		#backgroundTable {
+			margin:0; 
+			padding:0; 
+			width:100% !important;
+			height: 1800px;
+			/*
+			line-height: 100% !important;
+			*/
+		}
+		/* End reset */
+
+		/* Some sensible defaults for images
+		Bring inline: Yes. */
+		img {
+			border:0 none;
+			outline:none; 
+			text-decoration:none; 
+			height:auto;
+        	line-height:100%;
+			-ms-interpolation-mode: bicubic;
+		} 
+		
+		a img {
+			border:none;
+		}
+
+		.image_fix {
+			display:block;
+		}
+
+		/* Yahoo paragraph fix
+		Bring inline: Yes.
+		p {
+			margin: 1em 0;
+		} 
+		*/
+
+		/* Hotmail header color reset
+		Bring inline: Yes. */
+		h1, h2, h3, h4, h5, h6 {
+			color: black !important;
+		}
+
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			color: blue !important;
+		}
+		
+		/* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+			color: red !important; 
+		}
+		
+		/* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+			color: purple !important; 
+		}
+
+		/* Remove spacing around Outlook 07, 10 tables
+		Bring inline: Yes */
+		table { 
+			border-collapse:collapse; 
+			mso-table-lspace:0pt; 
+			mso-table-rspace:0pt; 
+		}
+
+		/* Outlook 07, 10 Padding issue fix
+		Bring inline: DO NOT BRING INLINE! */
+		table td {
+			border-collapse: collapse;
+		}
+	</style>
+
+	<!-- base styles -->
+	<style type="text/css">
+		
+		p {
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 13px;
+			color: #000;
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			font-weight: bold;
+			color: #000;
+		}
+
+		.alt-link {
+			color: #880038;
+		}
+
+		.white {
+			color: #fff;
+		}
+
+		.heading1 {
+			font-size: 35px;
+			font-weight: bold;
+			color: #fff;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	</style>
+
+	<!-- module styles -->
+	<style type="text/css">
+	
+	</style>
+
+	<!-- handheld base styles -->
+	<style type="text/css">
+
+		@media only screen and (max-width: 480px) {
+			table[class=contentTable] {
+				
+			}
+
+			table[class=mainTableWrap],
+			[class~=fullWidth] {
+				width: 100% !important;
+			}
+			
+			/* hide all on handheld */
+			[class=hide] {
+				display: none !important;
+			}
+		}
+		
+		/* retina devices */
+		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+			[class=cc-logo-hide] {
+				display: none !important;
+			}
+
+			[class=cc-logo] {
+				display: block;
+				width: 196px;
+				height: 34px;
+				background: url(http://demos.mechdigital.com/xc-email-images/cc-logo@2x.gif) 0 0 no-repeat;
+				-webkit-background-size: 197px 34px;
+				background-size: 197px 34px;
+			}
+		}
+
+	</style>
+
+	<!-- handheld module styles -->
+	<style type="text/css">
+
+		@media only screen and (max-width: 480px) {
+			
+		}
+
+	</style>
+
+	<!-- table (for copy and paste)
+	<table cellpadding="0" cellspacing="0" border="0" bgcolor="#fff">
+	-->
+
+</head>
+<body>
+
+	<table cellpadding="0" cellspacing="0" border="0" bgcolor="#ccc" id="backgroundTable" class="contentTable"><tr><td valign="top"><!-- Start of wrapper table --> 
+		
+		<!-- Start main email wrap -->
+		<table width="600" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#fff" class="mainTableWrap">
+			
+			<!-- start header call-to-action -->
+			<tr>
+				<td>
+
+					<img src="img/test-OnSideIO-header.jpg" width="600" class="fullWidth image_fix" alt="">
+
+				</td>
+			</tr>
+			<!-- start header call-to-action -->
+
+			<!-- start logo area
+			<tr>
+				<td>
+					<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#2c0e1d">
+						<tr><td height="16" bgcolor="#2c0e1d"></td></tr>
+						<tr>
+							<td width="201"></td>
+							<td width="197">
+								<span class="cc-logo-hide">
+									<img src="http://demos.mechdigital.com/xc-email-images/cc-logo.gif" alt="Cross Country" class="image_fix" />
+								</span>
+								<span class="cc-logo"></span>
+							</td>
+							<td width="202"></td>
+						</tr>
+						<tr><td height="16" bgcolor="#2c0e1d"></td></tr>
+					</table>
+				</td>
+			</tr>
+			end logo area -->
+			
+			<!--
+			<tr>
+				<td>
+					
+					<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#880038">
+						<tr>
+							<td align="center" bgcolor="#880038">
+								<p class="heading1">
+									<i>Make <br />Christmas <br />special</i>
+								<p>
+								<p class="white">
+									with our selection of festive events <br />and affordable Advanced fares.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="img/ph-main-message-bottom.jpg" class="image_fix fullWidth" alt="" />
+							</td>
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+			-->
+
+			<tr>
+				<td>
+					<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff">
+						<tr>
+							<td width="44" bgcolor="#fff"></td><!-- horizontal spacer -->
+							<td width="512">
+								Headline
+								<br><br>
+								<p>Intro text area text area text area text area text area text area text area text area text area text area text area text area
+								 text area text area text area text area text area text area text area text area text area text area text area text area
+								</p>
+								<br><br>
+							</td>
+							<td width="44" bgcolor="#fff"></td><!-- horizontal spacer -->
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+			<!-- start three columns -->
+			<tr>
+				<td>
+					
+					<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff">
+						<tr><td height="16" bgcolor="#fff"></td></tr><!-- vertical spacer -->
+						<tr>
+							<td>
+								<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff">
+									<tr>
+										<td width="44" bgcolor="#fff"></td><!-- horizontal spacer -->
+										<td width="512">
+											<!-- columns -->
+											<table width="150" align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff" class="fullWidth">
+												<tr>
+													<td>
+														Headline
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<p>Body text text text text text text text text text</p>
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<img src="img/test-image-1.jpg" width="150" alt="" class="fullWidth image_fix" />
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<a href="http://google.com">
+															<table align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#E64079" class="fullWidth">
+																<tr>
+																	<td colspan="3" height="8" width="10"></td>
+																</tr>
+																<tr>
+																	<td width="15"></td>
+																	<td>
+																		<span class="white">
+																			Button Text
+																		</span>
+																	</td>
+																	<td width="15"></td>
+																</tr>
+																<tr>
+																	<td colspan="3" height="8" width="10"></td>
+																</tr>
+															</table>
+														</a>
+													</td>
+												</tr>
+											</table>
+											
+											<table width="31" align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff"><tr><td width="31" height="25" bgcolor="#fff"></td></tr></table>
+
+											<table width="150" align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff" class="fullWidth">
+												<tr>
+													<td>
+														Headline
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<p>Body text text text text text text text text text</p>
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<img src="img/test-image-2.jpg" width="150" alt="" class="fullWidth image_fix" />
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<a href="http://google.com">
+															<table align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#E64079" class="fullWidth">
+																<tr>
+																	<td colspan="3" height="8" width="10"></td>
+																</tr>
+																<tr>
+																	<td width="15"></td>
+																	<td>
+																		<span class="white">
+																			Button Text
+																		</span>
+																	</td>
+																	<td width="15"></td>
+																</tr>
+																<tr>
+																	<td colspan="3" height="8" width="10"></td>
+																</tr>
+															</table>
+														</a>
+													</td>
+												</tr>
+											</table>
+											
+											<table width="31" align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff"><tr><td width="31" height="25" bgcolor="#fff"></td></tr></table>
+
+											<table width="150" align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff" class="fullWidth">
+												<tr>
+													<td>
+														Headline
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<p>Body text text text text text text text text text</p>
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<img src="img/test-image-3.jpg" width="150" alt="" class="fullWidth image_fix" />
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<a href="http://google.com">
+															<table align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#E64079" class="fullWidth">
+																<tr>
+																	<td colspan="3" height="8" width="10"></td>
+																</tr>
+																<tr>
+																	<td width="15"></td>
+																	<td>
+																		<span class="white">
+																			Button Text
+																		</span>
+																	</td>
+																	<td width="15"></td>
+																</tr>
+																<tr>
+																	<td colspan="3" height="8" width="10"></td>
+																</tr>
+															</table>
+														</a>
+													</td>
+												</tr>
+											</table>
+											<!-- columns -->
+										</td>
+										<td width="44" bgcolor="#fff"></td><!-- horizontal spacer -->
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr><td height="16" bgcolor="#fff"></td></tr><!-- vertical spacer -->
+					</table>
+
+				</td>
+			</tr>
+			<!-- end three columns -->
+
+			<!-- start single wide column -->
+			<tr>
+				<td>
+					
+					<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff">
+						<tr><td height="16" bgcolor="#fff"></td></tr><!-- vertical spacer -->
+						<tr>
+							<td>
+								<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff">
+									<tr>
+										<td width="44" bgcolor="#fff"></td><!-- horizontal spacer -->
+										<td width="512">
+											
+											<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff">
+												<tr>
+													<td>
+														Headline
+													</td>
+												</tr>
+												<tr><td height="10" bgcolor="#fff"></td></tr><!-- vertical spacer -->
+												<tr>
+													<td>
+														<p>Body text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
+													</td>
+												</tr>
+												<tr><td height="10" bgcolor="#fff"></td></tr><!-- vertical spacer -->
+												<tr>
+													<td>
+														<img src="img/test-image-5.jpg" width="512" alt="" class="fullWidth image_fix" />
+													</td>
+												</tr>
+												<tr><td height="10" bgcolor="#fff"></td></tr><!-- vertical spacer -->
+												<tr>
+													<td>
+														<a href="http://google.com">
+															<table align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#E64079" class="fullWidth">
+																<tr>
+																	<td colspan="3" height="8" width="10"></td>
+																</tr>
+																<tr>
+																	<td width="15"></td>
+																	<td>
+																		<span class="white">
+																			Button Text
+																		</span>
+																	</td>
+																	<td width="15"></td>
+																</tr>
+																<tr>
+																	<td colspan="3" height="8" width="10"></td>
+																</tr>
+															</table>
+														</a>
+													</td>
+												</tr>
+											</table>	
+
+										</td>
+										<td width="44" bgcolor="#fff"></td><!-- horizontal spacer -->
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr><td height="16" bgcolor="#fff"></td></tr><!-- vertical spacer -->
+					</table>
+
+				</td>
+			</tr>
+			<!-- end single wide column -->
+			
+			<!-- start two equal columns -->
+			<tr>
+				<td>
+					
+					<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff">
+						<tr><td height="16" bgcolor="#fff"></td></tr><!-- vertical spacer -->
+						<tr>
+							<td>
+								<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff">
+									<tr>
+										<td width="44" bgcolor="#fff"></td><!-- horizontal spacer -->
+										<td width="512">
+											<!-- columns -->
+											<table width="240" align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff" class="fullWidth">
+												<tr>
+													<td>
+														Headline
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<p>Body text text text text text text text text text text text text text text text</p>
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<img src="img/test-image-3.jpg" width="240" alt="" class="fullWidth image_fix" />
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<a href="http://google.com">
+															<table align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#E64079" class="fullWidth">
+																<tr>
+																	<td colspan="3" height="8" width="10"></td>
+																</tr>
+																<tr>
+																	<td width="15"></td>
+																	<td>
+																		<span class="white">
+																			Button Text
+																		</span>
+																	</td>
+																	<td width="15"></td>
+																</tr>
+																<tr>
+																	<td colspan="3" height="8" width="10"></td>
+																</tr>
+															</table>
+														</a>
+													</td>
+												</tr>
+											</table>
+											
+											<table width="32" align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff"><tr><td width="31" height="25" bgcolor="#fff"></td></tr></table>
+
+											<table width="240" align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#fff" class="fullWidth">
+												<tr>
+													<td>
+														Headline
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<p>Body text text text text text text text text text text text text text text text</p>
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<img src="img/test-image-2.jpg" width="240" alt="" class="fullWidth image_fix" />
+													</td>
+												</tr>
+												<tr>
+													<td height="10" bgcolor="#fff"></td><!-- vertical spacer -->
+												</tr>
+												<tr>
+													<td>
+														<a href="http://google.com">
+															<table align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#E64079" class="fullWidth">
+																<tr>
+																	<td colspan="3" height="8" width="10"></td>
+																</tr>
+																<tr>
+																	<td width="15"></td>
+																	<td>
+																		<span class="white">
+																			Button Text
+																		</span>
+																	</td>
+																	<td width="15"></td>
+																</tr>
+																<tr>
+																	<td colspan="3" height="8" width="10"></td>
+																</tr>
+															</table>
+														</a>
+													</td>
+												</tr>
+											</table>
+											<!-- columns -->
+										</td>
+										<td width="44" bgcolor="#fff"></td><!-- horizontal spacer -->
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr><td height="16" bgcolor="#fff"></td></tr><!-- vertical spacer -->
+					</table>
+
+				</td>
+			</tr>
+			<!-- end two equal columns -->
+
+			<!-- start footer -->
+			<tr>
+				<td>
+					<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#adaaa5">
+						<tr>
+							<td colspan="3" height="20" bgcolor="#adaaa5"></td>
+						</tr>
+						<tr>
+							<td width="44" bgcolor="#adaaa5"></td>
+							<td width="512">
+								<p>Footer text here</p>
+							</td>
+							<td width="44" bgcolor="#adaaa5"></td>
+						</tr>
+						<tr>
+							<td colspan="3" height="10" bgcolor="#adaaa5"></td>
+						</tr>
+						<tr>
+							<td width="44" bgcolor="#adaaa5"></td>
+							<td width="512">
+								<a href="http://linkedin.com" style="display: inline-block;">
+									<img src="img/social-linked.jpg" width="25" alt="" />
+								</a>
+								<a href="http://linkedin.com" style="display: inline-block;">
+									<img src="img/social-fb.jpg" width="25" alt="" />
+								</a>
+								<a href="http://linkedin.com" style="display: inline-block;">
+									<img src="img/social-twitter.jpg" width="25" border="0" alt="" />
+								</a>
+							</td>
+							<td width="44" bgcolor="#adaaa5"></td>
+						</tr>
+						<tr>
+							<td colspan="3" height="20" bgcolor="#adaaa5"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- end footer -->
+		</table>
+		<!-- End main email wrap -->
+
+	</td></tr></table><!-- End of wrapper table -->
+
+</body>
+</html>
